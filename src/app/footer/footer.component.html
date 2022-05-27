@@ -1,7 +1,24 @@
 <footer>
 <hr>
+<table mat-table [dataSource]="dataSource" class="table">
 
+  <!--- "Footer Data Table" -->
 
+  <!-- Our Services Column -->
+  <ng-container matColumnDef="ourservices">
+    <th mat-header-cell *matHeaderCellDef> Our Services </th>
+    <td mat-cell *matCellDef="let element"> {{element.ourservices}} </td>
+  </ng-container>
+
+  <!-- Get In Touch Column -->
+  <ng-container matColumnDef="getintouch">
+    <th mat-header-cell *matHeaderCellDef> Get In Touch </th>
+    <td mat-cell *matCellDef="let element"> {{element.getintouch}} </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
 <hr>
 <div id="second">
   <span class="copyright">&copy; copyright 2022 HospitalWebsite Made by<b> Trinity Team</b></span>

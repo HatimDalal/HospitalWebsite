@@ -1,9 +1,8 @@
-#first{
-  padding-left: 40%;
-  padding-right: 40%;
-}
 #second{
-  padding-left: 35%;
-  padding-right: 30%;
+  padding-left: 70%;
   width: 100%;
+}
+.table{
+  padding-left: 40%;
+  padding-right: 30%;
 }
