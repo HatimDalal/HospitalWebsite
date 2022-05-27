@@ -1,10 +1,9 @@
-.copyright{
-  align-items: center;
-  margin: auto;
-}
 #first{
-  background-color: blue;
+  padding-left: 40%;
+  padding-right: 40%;
 }
 #second{
-  background-color: black;
+  padding-left: 35%;
+  padding-right: 30%;
+  width: 100%;
 }
