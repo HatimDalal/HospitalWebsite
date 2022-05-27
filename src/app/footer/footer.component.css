@@ -2,7 +2,10 @@
   padding-left: 70%;
   width: 100%;
 }
-table{
-  padding-left: 80%;
+#table{
   width: 100%;
+  border-style: dashed;
+  border-width: 0.2rem;
+  text-align: justify;
+  margin: auto;
 }
