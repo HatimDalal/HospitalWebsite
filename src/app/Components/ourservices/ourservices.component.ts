@@ -7,6 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurservicesComponent implements OnInit {
 
+  Image: string="assets/img/ICCU.jpg";
+  Image1: string="assets/img/ward.jpg";
+
   constructor() { }
 
   ngOnInit(): void {
