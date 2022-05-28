@@ -1,0 +1,72 @@
+#name{
+  text-align: center;
+}
+#tabledata{
+  width: 100%;
+  text-align: center;
+}
+#para{
+  width: 100%;
+  text-align: center;
+}
+.image{
+  width: 70%;
+  height: 70%;
+  padding-left: 10%;
+}
+#showcase{
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+}
+#Showcase-column{
+  width: 100%;
+  text-align: center;
+}
+.column{
+  float: left;
+  width: 48%;
+}
+.info{
+  padding-right: 10%;
+}
+.column1{
+  padding-top: 5%;
+}
+#showcase1{
+  width: 100%;
+  margin: auto;
+  padding: 5px;
+}
+#Showcase-column1{
+  width: 100%;
+  clear: both;
+}
+.image1{
+  width: 34%;
+  height: 40%;
+  padding-left: 10%;
+  float: left;
+}
+.column2{
+  float: right;
+  width: 50%;
+  text-align: center;
+}
+#data{
+  padding-top: 230px;
+  text-align: center;
+  width: 100%;
+}
+#secondtable{
+  width: 100%;
+  text-align: center;
+}
+#H3{
+  padding-top: 15px;
+  text-align: center;
+}
+.image2{
+  width: 100%;
+  height: 5%;
+}

@@ -1,0 +1,11 @@
+#name{
+  padding-left: 40%;
+}
+#menu li{
+  list-style-type: none;
+  display: inline;
+  font-size: 1.5em;
+  color: brown;
+  padding-right: 30px;
+  margin-top: 32px;
+}
