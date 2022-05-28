@@ -1,11 +1,14 @@
+#footer{
+  height: 70%;
+}
 #second{
-  padding-left: 70%;
   width: 100%;
+  text-align: center;
 }
-#table{
+#tabledata{
   width: 100%;
-  border-style: dashed;
-  border-width: 0.2rem;
   text-align: justify;
-  margin: auto;
+  border: 0.2rem;
+  border-style: dashed;
 }
+
