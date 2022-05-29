@@ -1,5 +1,10 @@
+#Start{
+  padding-left: 40px;
+}
+#nametime{
+  padding-top: 20px;
+}
 .pull-left{
-  padding-top: 10px;
   padding-left: 50px;
 }
 .pull-right{
