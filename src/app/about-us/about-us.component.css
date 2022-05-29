@@ -33,7 +33,7 @@
     width: 50%;
     float:right;
     padding-top: 50px;
-    
+    padding-right: 35px;
     text-align: center;
     font-size: large;
   }
@@ -43,7 +43,7 @@
       float:left;
       padding-left: 40px;
   }
- 
+
 #main{
     text-align:center;
     width:100%;
@@ -53,8 +53,10 @@
     padding-top: 30px;
     width:100%;
 }
-
-
 .test1{
     text-align: center;
+}
+#tabletest{
+  width: 100%;
+  text-align: center;
 }
