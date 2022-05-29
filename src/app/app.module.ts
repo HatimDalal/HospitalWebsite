@@ -23,7 +23,7 @@ import { RouterModule } from "@angular/router";
     AboutUSComponent,
     OurservicesComponent,
     BsNavbarComponent,
-    HomeComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +33,7 @@ import { RouterModule } from "@angular/router";
     RouterModule.forRoot([
       {path: '', component:HomeComponent},
       {path: 'Services', component:OurservicesComponent},
-      {path: 'About-us', component:AboutUSComponent}
+      {path: 'About-us', component:AboutUSComponent},
     ])
   ],
   providers: [],
