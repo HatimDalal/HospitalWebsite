@@ -39,6 +39,7 @@ import { RouterModule } from "@angular/router";
       {path: '', component:HomeComponent},
       {path: 'Services', component:OurservicesComponent},
       {path: 'About-us', component:AboutUSComponent},
+      {path: 'Inquiry', component:InquiryPageComponent}
     ])
   ],
   providers: [],
