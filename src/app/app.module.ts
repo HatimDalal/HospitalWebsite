@@ -24,19 +24,16 @@ import { RouterModule } from "@angular/router";
     AboutUSComponent,
     OurservicesComponent,
     BsNavbarComponent,
-<<<<<<< HEAD
     HomeComponent,
-    InquiryPageComponent
-=======
+    InquiryPageComponent,
     HomeComponent
->>>>>>> b41386bc496f162472c8dcc658031e0eef3adc32
   ],
 
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule
+    NgbModule,
 
     RouterModule.forRoot([
       {path: '', component:HomeComponent},
