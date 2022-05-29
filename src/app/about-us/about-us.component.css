@@ -1,3 +1,8 @@
+#about{
+    text-align: center;
+    font-style:normal;
+}
+
 .img1{
     width:100%;
     height: 50rem;
@@ -10,6 +15,8 @@
 .class3{
     width:100%;
     text-align: center;
+    font-size: medium;
+    text-justify: inter-word;
 }
 
 #inner-colmn{
@@ -24,12 +31,16 @@
   }
 .content{
     width: 50%;
-    float:left;
-    padding-left: 30px;
+    float:right;
+    padding-top: 50px;
+    
+    text-align: center;
+    font-size: large;
   }
   .img4{
-      width:50%;
-      float:right;
+      width:5%;
+      height:5%;
+      float:left;
       padding-left: 40px;
   }
  
