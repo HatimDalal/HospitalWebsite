@@ -24,8 +24,12 @@ import { RouterModule } from "@angular/router";
     AboutUSComponent,
     OurservicesComponent,
     BsNavbarComponent,
+<<<<<<< HEAD
     HomeComponent,
     InquiryPageComponent
+=======
+    HomeComponent
+>>>>>>> b41386bc496f162472c8dcc658031e0eef3adc32
   ],
 
   imports: [
@@ -37,7 +41,7 @@ import { RouterModule } from "@angular/router";
     RouterModule.forRoot([
       {path: '', component:HomeComponent},
       {path: 'Services', component:OurservicesComponent},
-      {path: 'About-us', component:AboutUSComponent}
+      {path: 'About-us', component:AboutUSComponent},
     ])
   ],
   providers: [],
