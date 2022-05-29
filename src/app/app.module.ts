@@ -11,6 +11,7 @@ import { OurservicesComponent } from './Components/ourservices/ourservices.compo
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BsNavbarComponent } from './bs-navbar/bs-navbar.component';
 import { HomeComponent } from './home/home.component';
+import { InquiryPageComponent } from './Inquiry-Page/Inquiry-Page.component';
 
 import { RouterModule } from "@angular/router";
 
@@ -24,12 +25,15 @@ import { RouterModule } from "@angular/router";
     OurservicesComponent,
     BsNavbarComponent,
     HomeComponent,
+    InquiryPageComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    NgbModule,
+    NgbModule
+
     RouterModule.forRoot([
       {path: '', component:HomeComponent},
       {path: 'Services', component:OurservicesComponent},
