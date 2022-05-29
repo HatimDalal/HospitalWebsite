@@ -7,9 +7,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OurservicesComponent implements OnInit {
 
-  Image: string="assets/img/ICCU.jpg";
-  Image1: string="assets/img/ward.jpg";
-  Image2: string="assets/img/back.jpg"
+  Image: string="assets/img/ICCU.svg";
+  Image1: string="assets/img/ward.svg";
+  Image2: string="assets/img/back.svg"
 
   constructor() { }
 
