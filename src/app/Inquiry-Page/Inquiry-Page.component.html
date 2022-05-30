@@ -4,46 +4,63 @@
     Our representative will contact you soon.</i></p>
 </div> <!--Name Line has ended-->
 
+<div class="container">  <!--Inquiry Form has started-->
+  <div class="row">
+    <div class="col-md-9 offset-md-2">
+      <form [formGroup]="inquiryform" (ngSubmit)="onSubmit()">  <!--Form tag has started-->
 
-  <form class="row g-3 needs-validation" id="form" novalidate> <!--Inquiry Form has started-->
+        <div class="formgroup col-md-6"> <!--First Name of the form-->
+          <label for="firstname">First Name:</label>
+          <input formControlName="firstName" [ngClass]="{'is-invalid':submitted && inquiryform.controls['firstName'].errors}" type="text" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['firstName'].errors" class="text-danger">
+            <div *ngIf="submitted && inquiryform.controls['firstName'].errors?.['required']">Please, enter your first name.</div>
+          </div>
+        </div>
 
-    <div class="col-md-4">  <!--First Name-->
-      <label for="validationCustom01" class="form-label">First name:</label>
-      <input type="text" class="form-control" id="validationCustom01" placeholder="First Name" required>
+        <div class="formgroup col-md-6"> <!--Last Name of the form-->
+          <label for="lastname">Last Name:</label>
+          <input formControlName="lastName" [ngClass]="{'is-invalid':submitted && inquiryform.controls['lastName'].errors}" type="text" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['lastName'].errors" class="text-danger">
+            <div *ngIf="submitted && inquiryform.controls['lastName'].errors?.['required']">Please, enter your last name.</div>
+          </div>
+        </div>
+
+        <div class="formgroup col-md-6"> <!--Phone Number of the form-->
+          <label for="number">Phone Number:</label>
+          <input formControlName="Number" [ngClass]="{'is-invalid':submitted && inquiryform.controls['Number'].errors}" type="tel" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['Number'].errors" class="text-danger">
+            <div *ngIf="submitted && inquiryform.controls['Number'].errors?.['required']">Please, enter your Phone Number.</div>
+          </div>
+        </div>
+
+        <div class="formgroup col-md-6"> <!--Email of the form-->
+          <label for="email">Email:</label>
+          <input formControlName="Email" [ngClass]="{'is-invalid':submitted && inquiryform.controls['Email'].errors}" type="text" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['Email'].errors" class="text-danger">
+            <div *ngIf="submitted && inquiryform.controls['Email'].errors?.['required']">Please,enter your email.</div>
+            <div *ngIf="submitted && inquiryform.controls['Email'].errors?.['email']">Please,enter your valid email.</div>
+          </div>
+        </div>
+
+        <div class="formgroup col-md-7"> <!--Query of the form-->
+          <label for="query">Your Query:</label>
+          <input formControlName="Query" [ngClass]="{'is-invalid':submitted && inquiryform.controls['Query'].errors}" type="text" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['Query'].errors" class="text-danger">
+            <div *ngIf="submitted && inquiryform.controls['Query'].errors?.['required']">Please, enter your query.</div>
+          </div>
+        </div>
+
+        <div class="formgroup col-md-7"> <!--Button of the form-->
+          <button class="btn btn-primary">Submit Form</button>
+        </div>
+
+      </form>  <!--Form tag has ended-->
     </div>
-
-    <div class="col-md-4"> <!--Last Name-->
-      <label for="validationCustom02" class="form-label">Last name:</label>
-      <input type="text" class="form-control" id="validationCustom02" placeholder="Last Name" required>
-    </div>
-
-    <div class="col-md-5"> <!--Email Address-->
-      <label for="exampleFormControlInput1" class="form-label">Email address:</label>
-      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
-    </div>
-
-    <div class="col-md-5"> <!--Phone Number-->
-      <label for="exampleFormControlInput1" class="form-label">Phone Number:</label>
-      <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number:">
-    </div>
-
-    <div class="col-mb-3">  <!--Query-->
-      <label for="exampleFormControlTextarea1" class="form-label">Your Query:</label>
-      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="2" placeholder="Your Query"></textarea>
-    </div>
-
-    <div class="col-12"> <!--Form Button-->
-      <button class="btn btn-primary" type="submit">Submit form</button>
-    </div>
-
-</form> <!--Inquiry Form has ended-->
-
-
-
-
+  </div>
+</div>  <!--Inquiry Form has ended-->
 
 <div id="thanks"> <!--Thanks Line has started-->
-  <h4 style="text-align: center;">Thanks, for trusting our services !</h4>
+  <h4 style="text-align: center;"><i>Thanks, for trusting our services !</i></h4>
 </div> <!--Thanks Line has ended-->
 <hr>
 <div id="nametime"> <!--Name & timing of page has started-->
@@ -57,3 +74,5 @@
   <p><span class="glyphicon glyphicon-earphone"> Sunday - 09:00AM - 10:00PM</span></p><br>
  </div>
 </div> <!--Name & timing of page has ended-->
+
+
