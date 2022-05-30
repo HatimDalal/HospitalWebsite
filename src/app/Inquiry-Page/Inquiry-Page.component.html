@@ -29,7 +29,7 @@
           <label for="number">Phone Number:</label>
           <input formControlName="Number" [ngClass]="{'is-invalid':submitted && inquiryform.controls['Number'].errors}" type="tel" class="form-control">
           <div *ngIf="submitted && inquiryform.controls['Number'].errors" class="text-danger">
-            <div *ngIf="submitted && inquiryform.controls['Number'].errors?.['required']">Please, enter your Phone Number.</div>
+            <div *ngIf="submitted && inquiryform.controls['Number'].errors?.['required']">Please, enter your 10 digit Phone Number.</div>
           </div>
         </div>
 
