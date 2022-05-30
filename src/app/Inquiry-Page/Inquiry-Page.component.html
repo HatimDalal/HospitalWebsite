@@ -2,19 +2,53 @@
   <h1>Inquiry Page</h1>
   <p><i>Please, feel free to drop your queries in the following form. <br>
     Our representative will contact you soon.</i></p>
-</div> <!--Name Line has started-->
+</div> <!--Name Line has ended-->
+
+
+  <form class="row g-3 needs-validation" id="form" novalidate> <!--Inquiry Form has started-->
+
+    <div class="col-md-4">  <!--First Name-->
+      <label for="validationCustom01" class="form-label">First name:</label>
+      <input type="text" class="form-control" id="validationCustom01" placeholder="First Name" required>
+    </div>
+
+    <div class="col-md-4"> <!--Last Name-->
+      <label for="validationCustom02" class="form-label">Last name:</label>
+      <input type="text" class="form-control" id="validationCustom02" placeholder="Last Name" required>
+    </div>
+
+    <div class="col-md-5"> <!--Email Address-->
+      <label for="exampleFormControlInput1" class="form-label">Email address:</label>
+      <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+    </div>
+
+    <div class="col-md-5"> <!--Phone Number-->
+      <label for="exampleFormControlInput1" class="form-label">Phone Number:</label>
+      <input type="tel" class="form-control" id="exampleFormControlInput1" placeholder="Phone Number:">
+    </div>
+
+    <div class="col-mb-3">  <!--Query-->
+      <label for="exampleFormControlTextarea1" class="form-label">Your Query:</label>
+      <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" cols="2" placeholder="Your Query"></textarea>
+    </div>
+
+    <div class="col-12"> <!--Form Button-->
+      <button class="btn btn-primary" type="submit">Submit form</button>
+    </div>
+
+</form> <!--Inquiry Form has ended-->
 
 
 
-<div> <!--Thanks Line has started-->
-  <h4 style="text-align: center;">Thanks for trusting our services !</h4>
+
+
+<div id="thanks"> <!--Thanks Line has started-->
+  <h4 style="text-align: center;">Thanks, for trusting our services !</h4>
 </div> <!--Thanks Line has ended-->
-
-
 <hr>
 <div id="nametime"> <!--Name & timing of page has started-->
   <div class = "pull-left">
-    <h1>Trinity <br>Hospital</h1>
+    <h1>Trinity<br>Hospital</h1>
  </div>
  <div class="pull-right">
   <h3>Opening Hours:</h3>
