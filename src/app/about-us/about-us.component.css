@@ -56,8 +56,11 @@
 }
 .test1{
     text-align: center;
+    border: double;
+    
 }
 #tabletest{
   width: 100%;
   text-align: center;
+  
 }

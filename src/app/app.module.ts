@@ -13,6 +13,7 @@ import { HomeComponent } from './home/home.component';
 import { InquiryPageComponent } from './Inquiry-Page/Inquiry-Page.component';
 
 import { RouterModule } from "@angular/router";
+import { BookingAppointmentComponent } from './booking-appointment/booking-appointment.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { RouterModule } from "@angular/router";
     BsNavbarComponent,
     HomeComponent,
     InquiryPageComponent,
-    HomeComponent
+    HomeComponent,
+    BookingAppointmentComponent
   ],
 
   imports: [
@@ -37,7 +39,8 @@ import { RouterModule } from "@angular/router";
       {path: '', component:HomeComponent},
       {path: 'Services', component:OurservicesComponent},
       {path: 'About-us', component:AboutUSComponent},
-      {path: 'Inquiry', component:InquiryPageComponent}
+      {path: 'Inquiry', component:InquiryPageComponent},
+      {path:'Booking-Appointment',component:BookingAppointmentComponent}
     ])
   ],
   providers: [],
