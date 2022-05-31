@@ -1,5 +1,9 @@
 #Start{
   padding-left: 40px;
+  padding-bottom: 5px;
+}
+#thanks{
+  padding-top: 5px;
 }
 #nametime{
   padding-top: 20px;
@@ -9,4 +13,14 @@
 }
 .pull-right{
   padding-right: 55px;
+}
+.formgroup{
+  padding-top: 9px;
+}
+.container{
+  border: 0.1rem;
+  border-style: dotted;
+}
+#button{
+  padding-bottom: 10px;
 }
