@@ -1,14 +1,17 @@
 <div id="fillinfo"> <!--Heading of Page has started-->
-<h3>Please, book your appointment with us.</h3>
-<h3>Better Heathcare Soltions with Better Doctor Appointment</h3>
+<h1>Booking Appointment Page</h1>
+<p><i>Fill the following booking-appointment form,
+  for your better healthcare solutions with our experienced doctors</i></p>
 </div> <!--Heading of Page has ended-->
 
-<div class="container">
+<div id="space"></div> <!--To put the space between heading and form-->
+
+<div class="container">  <!--Booking Fom has started-->
     <div class="row">
-        <div class="col-md-6 offset-md-2">
+        <div class="col-md-9.5 offset-md-1.5">
             <form [formGroup]="bookingform" (ngSubmit)="onSubmit()">
 
-                <div class="form-group"> <!--First Name of the form-->
+                <div class="form-group col-md-6"> <!--First Name of the form-->
                     <label for="firstname">First Name:</label>
                     <input formControlName="firstName" [ngClass]="{'is-invalid': submitted && bookingform.controls['firstName'].errors}" type="text" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['firstName'].errors" class="text-danger">
@@ -16,7 +19,7 @@
                     </div>
                 </div>
 
-                <div class="form-group"> <!--Last Name of the form-->
+                <div class="form-group col-md-6"> <!--Last Name of the form-->
                     <label for="lastname">Last Name:</label>
                     <input formControlName="lastName" [ngClass]="{'is-invalid': submitted && bookingform.controls['firstName'].errors}" type="text" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['lastName'].errors" class="text-danger">
@@ -24,15 +27,15 @@
                     </div>
                   </div>
 
-                  <div class="formgroup"> <!--Phone Number of the form-->
+                  <div class="formgroup col-md-6"> <!--Phone Number of the form-->
                     <label for="number">Phone Number:</label>
                     <input formControlName="Number" [ngClass]="{'is-invalid':submitted && bookingform.controls['Number'].errors}" type="tel" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['Number'].errors" class="text-danger">
                       <div *ngIf="submitted && bookingform.controls['Number'].errors?.['required']">Please, enter your 10 digit Phone Number.</div>
                     </div>
                 </div>
-          
-                  <div class="formgroup"> <!--Email of the form-->
+
+                  <div class="formgroup col-md-6"> <!--Email of the form-->
                     <label for="email">Email:</label>
                     <input formControlName="Email" [ngClass]="{'is-invalid':submitted && bookingform.controls['Email'].errors}" type="text" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['Email'].errors" class="text-danger">
@@ -41,7 +44,7 @@
                     </div>
                   </div>
 
-                  <div class="formgroup"> <!--Age of the form-->
+                  <div class="formgroup col-md-6"> <!--Age of the form-->
                       <label for="age">Age:</label>
                       <input formControlName="Age" [ngClass]="{'is-invalid':submitted && bookingform.controls['Age'].errors}" type="text" class="form-control">
                       <div *ngIf="submitted && bookingform.controls['Age'].errors" class="text-danger">
@@ -49,7 +52,7 @@
                       </div>
                   </div>
 
-                  <div class="formgroup"> <!--Blood Group of the form-->
+                  <div class="formgroup col-md-6"> <!--Blood Group of the form-->
                       <label for="BGroup">Blood Group:</label>
                       <input formControlName="BGroup" [ngClass]="{'is-invalid':submitted && bookingform.controls['BGroup'].errors}" type="text" class="form-control">
                       <div *ngIf="submitted && bookingform.controls['BGroup'].errors" class="text-danger">
@@ -57,27 +60,32 @@
                       </div>
                   </div>
 
-                  <div class="formgroup"> <!--Doctor's name of the form-->
-                      <label for="name">Doctor's Name:</label> 
+                  <div class="formgroup col-md-6"> <!--Doctor's name of the form-->
+                      <label for="name">Doctor's Name:</label>
                       <input type="text" class="form-control">
                   </div>
 
-                  <div class="formgroup"> <!--Query of the form-->
-                    <label for="query">Your Query:</label>
-                    <input formControlName="Query" [ngClass]="{'is-invalid':submitted && bookingform.controls['Query'].errors}" type="text" class="form-control">
-                    <div *ngIf="submitted && bookingform.controls['Query'].errors" class="text-danger">
-                      <div *ngIf="submitted && bookingform.controls['Query'].errors?.['required']">Please, enter your query.</div>
+                  <div class="formgroup col-md-6"> <!--Health Concern of the form-->
+                    <label for="query">Your Health Concern:</label>
+                    <input formControlName="Concern" [ngClass]="{'is-invalid':submitted && bookingform.controls['Concern'].errors}" type="text" class="form-control">
+                    <div *ngIf="submitted && bookingform.controls['Concern'].errors" class="text-danger">
+                      <div *ngIf="submitted && bookingform.controls['Concern'].errors?.['required']">Please, enter your health concern.</div>
                     </div>
                   </div>
 
-                <div class="form-group">  <!--Button of the form-->
+                <div class="form-group col-md-7" id="button">  <!--Button of the form-->
                     <button class="btn btn-primary">Submit Form</button>
                 </div>
 
             </form>
         </div>
     </div>
-</div>
+</div> <!--Booking Fom has ended-->
+
+<div id="thanks"> <!--Thanks Line has started-->
+  <h4 style="text-align: center;"><i>Thanks, for trusting our services !</i></h4>
+</div> <!--Thanks Line has ended-->
+
 
 
 

@@ -21,7 +21,7 @@ export class BookingAppointmentComponent {
       Email:['',[Validators.required,Validators.email]],
       Age:['',[Validators.required,Validators.minLength(2),Validators.maxLength(2)]],
       BGroup:['',[Validators.required,Validators.minLength(3),Validators.maxLength(3)]],
-      Query:['',Validators.required]
+      Concern:['',Validators.required]
     })
   }
 
