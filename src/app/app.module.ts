@@ -16,6 +16,7 @@ import { BookingAppointmentComponent } from './booking-appointment/booking-appoi
 import { RouterModule } from "@angular/router";
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,7 +27,8 @@ import { RouterModule } from "@angular/router";
     HomeComponent,
     InquiryPageComponent,
     HomeComponent,
-    BookingAppointmentComponent
+    BookingAppointmentComponent,
+    
   ],
 
   imports: [

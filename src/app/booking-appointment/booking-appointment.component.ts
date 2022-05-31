@@ -1,15 +1,33 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-booking-appointment',
   templateUrl: './booking-appointment.component.html',
   styleUrls: ['./booking-appointment.component.css']
 })
-export class BookingAppointmentComponent implements OnInit {
+export class BookingAppointmentComponent {
+  bookingform!:FormGroup
+  submitted = false;
 
-  constructor() { }
+  constructor(private FormBuilder:FormBuilder){ }
 
-  ngOnInit(): void {
+  ngOnInit(){
+    this.bookingform = this.FormBuilder.group({
+      firstName:['',Validators.required]
+    })
   }
 
+  onSubmit(){
+    this.submitted = true
+
+    if(this.bookingform.invalid){
+      return
+    }
+    alert("Success")
+  }
+  
+
+  
 }
