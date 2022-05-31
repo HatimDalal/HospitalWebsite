@@ -15,7 +15,8 @@ export class BookingAppointmentComponent {
 
   ngOnInit(){
     this.bookingform = this.FormBuilder.group({
-      firstName:['',Validators.required]
+      firstName:['',Validators.required],
+      lastName:['',Validators.required],
     })
   }
 
@@ -27,7 +28,7 @@ export class BookingAppointmentComponent {
     }
     alert("Success")
   }
-  
 
-  
+
+
 }
