@@ -15,7 +15,8 @@ import { InquiryPageComponent } from './Inquiry-Page/Inquiry-Page.component';
 import { BookingAppointmentComponent } from './booking-appointment/booking-appointment.component';
 
 import { RouterModule } from "@angular/router";
-
+import { HttpClientModule } from '@angular/common/http'
+import { ApiserviceService } from './apiservice.service';
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { RouterModule } from "@angular/router";
     InquiryPageComponent,
     HomeComponent,
     BookingAppointmentComponent,
-    
+
   ],
 
   imports: [
@@ -38,6 +39,7 @@ import { RouterModule } from "@angular/router";
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
     RouterModule.forRoot([
       {path: '', component:HomeComponent},
@@ -47,7 +49,7 @@ import { RouterModule } from "@angular/router";
       {path:'Booking-Appointment',component:BookingAppointmentComponent}
     ])
   ],
-  providers: [],
+  providers: [ApiserviceService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

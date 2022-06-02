@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
+import { ApiserviceService } from '../apiservice.service';
 
 
 @Component({
@@ -8,10 +9,13 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./Inquiry-Page.component.css']
 })
 export class InquiryPageComponent{
-  inquiryform!:FormGroup
+  // inquiryform!:FormGroup
   submitted = false;
 
-  constructor(private FormBuilder:FormBuilder){}
+  constructor(private FormBuilder:FormBuilder, private service:ApiserviceService){}
+
+  errormsg:any;
+
 
   ngOnInit(){
     //validations
@@ -25,11 +29,33 @@ export class InquiryPageComponent{
   }
 
   onSubmit() {
-    this.submitted = true
+    // this.submitted = true
 
-    if(this.inquiryform.invalid){
-      return
+    // if(this.inquiryform.invalid){
+    //   return
+    // }
+    // alert("Success")
+
+    if(this.inquiryform.valid){
+      console.log(this.inquiryform.value);
+      this.service.createData(this.inquiryform.value).subscribe((res)=>{
+        console.log(res, 'res==>');
+
+      });
     }
-    alert("Success")
+    else{
+      this.errormsg = 'all fields are required.';
+
+    }
+
   }
+
+  inquiryform = new FormGroup({
+    'firstName' : new FormControl(''),
+    'lastName' : new FormControl(''),
+    'Number' : new FormControl(''),
+    'Email' : new FormControl(''),
+    'Query' : new FormControl('')
+  });
+
 }

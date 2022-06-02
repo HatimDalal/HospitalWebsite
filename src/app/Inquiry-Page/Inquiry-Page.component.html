@@ -7,6 +7,12 @@
 <div class="container">  <!--Inquiry Form has started-->
   <div class="row">
     <div class="col-md-9 offset-md-2">
+      <!-- Show errormsg-->
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{errormsg}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
       <form [formGroup]="inquiryform" (ngSubmit)="onSubmit()">  <!--Form tag has started-->
 
         <div class="formgroup col-md-6"> <!--First Name of the form-->
