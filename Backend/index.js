@@ -3,13 +3,14 @@ const bodyparser = require('body-parser');
 const cors = require('cors');
 
 const { Client } = require('pg');
-// const { default: cli } = require('@angular/cli');
-// const res = require('express/lib/response');
-// const { request } = require('http');
-// const { header } = require('express/lib/response');
+const { default: cli } = require('@angular/cli');
+const res = require('express/lib/response');
+const { request } = require('http');
+const { header } = require('express/lib/response');
 
-// header("Content-Type: application/json");
-// header("Access-Control-Allow-Origin: http:localhost:3000");
+
+header("Content-Type: application/json");
+
 
 const port = 3000;
 const app = express();
@@ -23,6 +24,8 @@ const client = new Client({
     database:"Hospital"
 })
 
+app.use(cors());
+app.options('/form/:id', cors())
 app.use((req, res, next) => {
   res.header('Access-Control-Allow-Origin', '*');
   next();
@@ -37,8 +40,12 @@ client.connect(err =>{
 app.listen(port, () =>
 console.log(`welcome.:${port}`));
 
-app.get('/', (request,response) => {
-  response.send('welcome');
+app.get('http://localhost:3000/', (request,response) => {
+  response.send("get method");
+})
+
+app.post('http://localhost:3000/', (request, response) => {
+  res.send("POST Request Called")
 })
 
 
