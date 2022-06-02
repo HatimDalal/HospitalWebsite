@@ -15,6 +15,8 @@ import { InquiryPageComponent } from './Inquiry-Page/Inquiry-Page.component';
 import { BookingAppointmentComponent } from './booking-appointment/booking-appointment.component';
 
 import { RouterModule } from "@angular/router";
+import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
+
 import { HttpClientModule } from '@angular/common/http'
 import { ApiserviceService } from './apiservice.service';
 
@@ -30,6 +32,8 @@ import { ApiserviceService } from './apiservice.service';
     InquiryPageComponent,
     HomeComponent,
     BookingAppointmentComponent,
+    FreeCheckupComponent,
+    
 
   ],
 
@@ -46,7 +50,8 @@ import { ApiserviceService } from './apiservice.service';
       {path: 'Services', component:OurservicesComponent},
       {path: 'About-us', component:AboutUSComponent},
       {path: 'Inquiry', component:InquiryPageComponent},
-      {path:'Booking-Appointment',component:BookingAppointmentComponent}
+      {path:'Booking-Appointment',component:BookingAppointmentComponent},
+      {path:'Free-Checkup',component:FreeCheckupComponent}
     ])
   ],
   providers: [ApiserviceService],
