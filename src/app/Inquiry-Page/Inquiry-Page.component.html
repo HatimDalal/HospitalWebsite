@@ -7,6 +7,12 @@
 <div class="container">  <!--Inquiry Form has started-->
   <div class="row">
     <div class="col-md-9 offset-md-2">
+      <!-- Show errormsg-->
+      <div class="alert alert-warning alert-dismissible fade show" role="alert">
+        <strong>{{errormsg}}</strong>
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+
       <form [formGroup]="inquiryform" (ngSubmit)="onSubmit()">  <!--Form tag has started-->
 
         <div class="formgroup col-md-6"> <!--First Name of the form-->
@@ -63,6 +69,7 @@
   <h4 style="text-align: center;"><i>Thanks, for trusting our services !</i></h4>
 </div> <!--Thanks Line has ended-->
 
+<div>
 <div id="nametime"> <!--Name & timing of page has started-->
   <div class = "pull-left">
     <h1>Trinity<br>Hospital</h1>
@@ -74,5 +81,6 @@
   <p><span class="glyphicon glyphicon-dashboard"> Sunday - 09:00AM - 10:00PM</span></p><br>
  </div>
 </div> <!--Name & timing of page has ended-->
+</div>
 
 

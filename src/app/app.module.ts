@@ -17,6 +17,8 @@ import { BookingAppointmentComponent } from './booking-appointment/booking-appoi
 import { RouterModule } from "@angular/router";
 import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
 
+import { HttpClientModule } from '@angular/common/http'
+import { ApiserviceService } from './apiservice.service';
 
 
 @NgModule({
@@ -32,6 +34,7 @@ import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
     BookingAppointmentComponent,
     FreeCheckupComponent,
     
+
   ],
 
   imports: [
@@ -40,6 +43,7 @@ import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
     FormsModule,
     NgbModule,
     ReactiveFormsModule,
+    HttpClientModule,
 
     RouterModule.forRoot([
       {path: '', component:HomeComponent},
@@ -50,7 +54,7 @@ import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
       {path:'Free-Checkup',component:FreeCheckupComponent}
     ])
   ],
-  providers: [],
+  providers: [ApiserviceService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
