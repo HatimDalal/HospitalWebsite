@@ -5,11 +5,11 @@ const cors = require('cors');
 const { Client } = require('pg');
 // const { default: cli } = require('@angular/cli');
 // const res = require('express/lib/response');
-const { request } = require('http');
-const { header } = require('express/lib/response');
+// const { request } = require('http');
+// const { header } = require('express/lib/response');
 
-header("Content-Type: application/json");
-header("Access-Control-Allow-Origin: http:localhost:3000");
+// header("Content-Type: application/json");
+// header("Access-Control-Allow-Origin: http:localhost:3000");
 
 const port = 3000;
 const app = express();
