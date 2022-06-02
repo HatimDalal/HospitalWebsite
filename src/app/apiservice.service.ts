@@ -1,16 +1,35 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHandler } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Inquiry } from './inquiry';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ApiserviceService {
+  apiUrl=[];
 
   constructor(private _http:HttpClient) { }
   // connect HospitalWebsite to backend
 
-  apiUrl = 'http://localhost:3000/form';
+
+
+  getAll():Observable<Inquiry[]>{
+    let apiUrl = 'http://localhost:3000/form';
+
+    return this._http.get<Inquiry[]>(apiUrl);
+  }
+
+  createdata(data:any):Observable<any>
+  {
+    let apiUrl = 'http://localhost:3000/form';
+
+
+    console.log(data,'createapi=>');
+    return this._http.post(`${this.apiUrl}`, data);
+  }
+
+
 
   // //get all data
   // getAllData():Observable<any>
@@ -18,11 +37,9 @@ export class ApiserviceService {
   //   return this._http.get(`${this.apiUrl}`);
   // }
 
-  //Create Inquiry
-  createData(data:any):Observable<any>
-  {
-    console.log(data, 'createapi =>');
-    return this._http.post(`${this.apiUrl}`,data,{headers:{"Access-Control-Allow-Origin":"*"}});
-  }
 
 }
+function apiUrl<T>(apiUrl: any): Observable<Inquiry[]> {
+  throw new Error('Function not implemented.');
+}
+
