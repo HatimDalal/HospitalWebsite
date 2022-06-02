@@ -30,8 +30,8 @@ export class FreeCheckupComponent implements OnInit {
    }
 
   onClick(){
-    const party = require("party-js");
-    party.confetti(this);
+    // const party = require("party-js");
+    // party.confetti(this);
   }
 
   // onSubmit(){
