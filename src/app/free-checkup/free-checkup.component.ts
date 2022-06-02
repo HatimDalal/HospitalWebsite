@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import party from "party-js";
+
 @Component({
   selector: 'app-free-checkup',
   templateUrl: './free-checkup.component.html',
