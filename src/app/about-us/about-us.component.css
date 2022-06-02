@@ -1,6 +1,7 @@
 #about{
     text-align: center;
     font-style:normal;
+    color:#223A66;
 }
 
 .img1{
@@ -10,22 +11,27 @@
 
 .class2{
     text-align: center;
+    color:#223A66;
 
 }
 .class3{
     width:100%;
     text-align: center;
-    font-size: medium;
-    text-justify: inter-word;
+    font-size:18px;
+    display:contents;
+    margin:30px; 
+    font-size: large; 
 }
 
 #inner-colmn{
     background-color: #f6f8fa;
     width:100%;
+   margin-left: 10%;
   }
   .why{
       text-align: center;
       padding-bottom: 10px;
+      color:#223A66;
   }
   .showcase{
       width:100%
@@ -37,6 +43,10 @@
     padding-right: 35px;
     text-align: center;
     font-size: large;
+
+    color:#223A66;
+    font-size:18px;
+    margin-left:80px  
   }
   .img4{
       width:5%;
