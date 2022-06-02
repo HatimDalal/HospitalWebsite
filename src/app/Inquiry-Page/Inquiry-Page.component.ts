@@ -14,7 +14,6 @@ export class InquiryPageComponent{
 
   constructor(private FormBuilder:FormBuilder, private service:ApiserviceService){}
 
-  errormsg:any;
 
 
   ngOnInit(){
@@ -29,23 +28,23 @@ export class InquiryPageComponent{
   }
 
   onSubmit() {
-    // this.submitted = true
+    this.submitted = true
 
-    // if(this.inquiryform.invalid){
-    //   return
-    // }
-    // alert("Success")
+    if(this.inquiryform.invalid){
+      return
+    }
+    alert("Success")
 
-    if(this.inquiryform.valid){
+    if(this.inquiryform.valid)
+    {
       console.log(this.inquiryform.value);
       this.service.createData(this.inquiryform.value).subscribe((res)=>{
         console.log(res, 'res==>');
-
+        this.inquiryform.reset();
       });
     }
     else{
-      this.errormsg = 'all fields are required.';
-
+      console.log('all fields are required.');
     }
 
   }

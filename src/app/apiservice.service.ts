@@ -22,7 +22,7 @@ export class ApiserviceService {
   createData(data:any):Observable<any>
   {
     console.log(data, 'createapi =>');
-    return this._http.post(`${this.apiUrl}`,data);
+    return this._http.post(`${this.apiUrl}`,data,{headers:{"Access-Control-Allow-Origin":"*"}});
   }
 
 }
