@@ -1,0 +1,20 @@
+#fillinfo{
+    text-align: center;
+    background-color:darksalmon;
+    height: 20%;
+    padding: 1px;
+}
+.formgroup{
+  padding-top: 9px;
+}
+.container{
+  padding-top: 10px;
+  border: 0.1rem;
+  border-style: dotted;
+}
+#button{
+  padding-top: 10px;
+}
+#space{
+  padding: 10px;
+}

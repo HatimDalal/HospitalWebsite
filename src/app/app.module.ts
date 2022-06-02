@@ -15,6 +15,7 @@ import { InquiryPageComponent } from './Inquiry-Page/Inquiry-Page.component';
 import { BookingAppointmentComponent } from './booking-appointment/booking-appointment.component';
 
 import { RouterModule } from "@angular/router";
+import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
 
 
 
@@ -29,6 +30,7 @@ import { RouterModule } from "@angular/router";
     InquiryPageComponent,
     HomeComponent,
     BookingAppointmentComponent,
+    FreeCheckupComponent,
     
   ],
 
@@ -44,7 +46,8 @@ import { RouterModule } from "@angular/router";
       {path: 'Services', component:OurservicesComponent},
       {path: 'About-us', component:AboutUSComponent},
       {path: 'Inquiry', component:InquiryPageComponent},
-      {path:'Booking-Appointment',component:BookingAppointmentComponent}
+      {path:'Booking-Appointment',component:BookingAppointmentComponent},
+      {path:'Free-Checkup',component:FreeCheckupComponent}
     ])
   ],
   providers: [],
