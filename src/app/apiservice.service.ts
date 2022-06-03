@@ -22,7 +22,7 @@ export class ApiserviceService {
   {
     let apiUrl = 'http://localhost:3000';
 
-    console.log(inquiry,'createapi=>');
+    console.log(inquiry);
     // let observable =
 
     this._http.post<Inquiry>("http://localhost:3000/form",inquiry);

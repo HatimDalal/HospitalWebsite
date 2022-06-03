@@ -85,8 +85,8 @@ app.post('/form',(req,res)=>{
  let Email = req.body.Email;
  let Issue = req.body.Issue;
 
- let qr = `insert into form(fname,lname,pnumber,email,issue)
-           values('${firstname}','${lastname}','${phonenumber}','${Email}','${Issue}')`;
+ let qr = `insert into form(fname,lname,email,issue,pnumber)
+           values('${firstname}','${lastname}','${Email}','${Issue}','${phonenumber}')`;
     console.log(qr,'qr')
 
   db.query(qr,(err,result)=>{
