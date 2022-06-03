@@ -13,7 +13,8 @@ import { BookingService } from '../booking.service';
 export class BookingAppointmentComponent {
   bookingform!:FormGroup
   submitted = false;
-
+  isLoaded: boolean = false;
+  patient: any;
   constructor (private book:BookingService,private FormBuilder:FormBuilder){ }
 
   Result:Booking[]=[];
@@ -59,11 +60,16 @@ export class BookingAppointmentComponent {
         alert("Success")
          if(this.bookingform.valid){
            console.log(this.bookingform.value);
-           this.book.createdata(this.bookingform.value).subscribe((res)=>{
-           console.log(res, 'res==>');
-            this.bookingform.reset();
-         });
-       }
+            this.book.createdata(this.bookingform.value).subscribe((res)=>{
+            console.log(res, 'res==>');
+             this.bookingform.reset();
+          });
+        }
+    //   let observable = this.bookingform.createdata(this.bookingform.value);
+    //   observable.subscribe((response) =>
+    //   this.patient = response
+    // )
+    // this.isLoaded = true
 
   }
 

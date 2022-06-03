@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const cors = require('cors');
-
+const { Client } = require('pg');
 const db = require('../connect/env')
 
 const app = express();
@@ -24,7 +24,7 @@ db.connect(err => {
 // Get all data
 // module.get=(app.get);
 
-app.get('/Hospital', (req, res) => {
+app.get('/Appointment', (req, res) => {
     let qr = `Select * from public."Appointment"`
     db
         .query({

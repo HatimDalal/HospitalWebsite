@@ -23,7 +23,7 @@ export class BookingService {
 	  return this.http.get<Booking[]>(baseurl);
 	}
 
-  createdata(data:any):Observable<Booking[]>
+  createdata(data:any):Observable<any>
   {
     //let bsurl = 'http://localhost:3000/Appointment';
 

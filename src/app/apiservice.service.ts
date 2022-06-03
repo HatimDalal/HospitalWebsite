@@ -27,6 +27,9 @@ export class ApiserviceService {
 
     console.log(data,'createapi=>');
     return this._http.post(`${this.apiUrl}`, data);
+    // let observable = this.http.post<any>("http://localhost:8080/createpatient",patient);
+    // return observable;
+
   }
 
 
