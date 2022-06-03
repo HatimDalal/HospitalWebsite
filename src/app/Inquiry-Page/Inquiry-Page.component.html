@@ -17,25 +17,25 @@
 
         <div class="formgroup col-md-6"> <!--First Name of the form-->
           <label for="firstname">First Name:</label>
-          <input formControlName="firstName" [ngClass]="{'is-invalid':submitted && inquiryform.controls['firstName'].errors}" type="text" class="form-control">
-          <div *ngIf="submitted && inquiryform.controls['firstName'].errors" class="text-danger">
+          <input formControlName="firstname" [ngClass]="{'is-invalid':submitted && inquiryform.controls['firstname'].errors}" type="text" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['firstname'].errors" class="text-danger">
             <div *ngIf="submitted && inquiryform.controls['firstName'].errors?.['required']">Please, enter your first name.</div>
           </div>
         </div>
 
         <div class="formgroup col-md-6"> <!--Last Name of the form-->
           <label for="lastname">Last Name:</label>
-          <input formControlName="lastName" [ngClass]="{'is-invalid':submitted && inquiryform.controls['lastName'].errors}" type="text" class="form-control">
-          <div *ngIf="submitted && inquiryform.controls['lastName'].errors" class="text-danger">
-            <div *ngIf="submitted && inquiryform.controls['lastName'].errors?.['required']">Please, enter your last name.</div>
+          <input formControlName="lastname" [ngClass]="{'is-invalid':submitted && inquiryform.controls['lastname'].errors}" type="text" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['lastname'].errors" class="text-danger">
+            <div *ngIf="submitted && inquiryform.controls['lastname'].errors?.['required']">Please, enter your last name.</div>
           </div>
         </div>
 
         <div class="formgroup col-md-6"> <!--Phone Number of the form-->
-          <label for="number">Phone Number:</label>
-          <input formControlName="Number" [ngClass]="{'is-invalid':submitted && inquiryform.controls['Number'].errors}" type="tel" class="form-control">
-          <div *ngIf="submitted && inquiryform.controls['Number'].errors" class="text-danger">
-            <div *ngIf="submitted && inquiryform.controls['Number'].errors?.['required']">Please, enter your 10 digit Phone Number.</div>
+          <label for="phonenumber">Phone Number:</label>
+          <input formControlName="phonenumber" [ngClass]="{'is-invalid':submitted && inquiryform.controls['phonenumber'].errors}" type="tel" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['phonenumber'].errors" class="text-danger">
+            <div *ngIf="submitted && inquiryform.controls['phonenumber'].errors?.['required']">Please, enter your 10 digit Phone Number.</div>
           </div>
         </div>
 
@@ -49,10 +49,10 @@
         </div>
 
         <div class="formgroup col-md-7"> <!--Query of the form-->
-          <label for="query">Your Query:</label>
-          <input formControlName="Query" [ngClass]="{'is-invalid':submitted && inquiryform.controls['Query'].errors}" type="text" class="form-control">
-          <div *ngIf="submitted && inquiryform.controls['Query'].errors" class="text-danger">
-            <div *ngIf="submitted && inquiryform.controls['Query'].errors?.['required']">Please, enter your query.</div>
+          <label for="Issue">Your Query:</label>
+          <input formControlName="Issue" [ngClass]="{'is-invalid':submitted && inquiryform.controls['Issue'].errors}" type="text" class="form-control">
+          <div *ngIf="submitted && inquiryform.controls['Issue'].errors" class="text-danger">
+            <div *ngIf="submitted && inquiryform.controls['Issue'].errors?.['required']">Please, enter your query.</div>
           </div>
         </div>
 

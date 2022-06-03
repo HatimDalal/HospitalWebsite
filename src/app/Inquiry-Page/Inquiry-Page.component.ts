@@ -20,11 +20,11 @@ Result:Inquiry[]=[];
   ngOnInit(){
     //validations
     this.inquiryform = this.FormBuilder.group({
-      firstName:['',Validators.required],
-      lastName:['',Validators.required],
-      Number:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
+      firstname:['',Validators.required],
+      lastname:['',Validators.required],
+      phonenumber:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
       Email:['',[Validators.required,Validators.email]],
-      Query:['',Validators.required]
+      Issue:['',Validators.required]
     })
 
     // this.service.getAll().subscribe((service:Inquiry[])=>{
