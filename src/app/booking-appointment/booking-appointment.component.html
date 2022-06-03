@@ -11,9 +11,9 @@
         <div class="col-md-9.5 offset-md-1.5">
             <form [formGroup]="bookingform" (ngSubmit)="onSubmit()">
 
-                <div class="form-group col-md-6" *ngFor="let bgl of Result"> <!--First Name of the form-->
+                <div class="form-group col-md-6"> <!--First Name of the form-->
                     <label for="firstname">First Name:</label>
-                    <input formControlName="firstName" {{bgl.firstname}} [ngClass]="{'is-invalid': submitted && bookingform.controls['firstName'].errors}" type="text" class="form-control">
+                    <input formControlName="firstName" [ngClass]="{'is-invalid': submitted && bookingform.controls['firstName'].errors}" type="text" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['firstName'].errors" class="text-danger">
                       <div *ngIf="submitted && bookingform.controls['firstName'].errors?.['required']">Please, enter your first name.</div>
                     </div>
@@ -21,7 +21,7 @@
 
                 <div class="form-group col-md-6"> <!--Last Name of the form-->
                     <label for="lastname">Last Name:</label>
-                    <input formControlName="lastName" {{bgl.lastname}} [ngClass]="{'is-invalid': submitted && bookingform.controls['firstName'].errors}" type="text" class="form-control">
+                    <input formControlName="lastName" [ngClass]="{'is-invalid': submitted && bookingform.controls['firstName'].errors}" type="text" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['lastName'].errors" class="text-danger">
                       <div *ngIf="submitted && bookingform.controls['lastName'].errors?.['required']">Please, enter your last name.</div>
                     </div>
@@ -29,7 +29,7 @@
 
                   <div class="formgroup col-md-6"> <!--Phone Number of the form-->
                     <label for="number">Phone Number:</label>
-                    <input formControlName="Number"  {{bgl.Phone}} [ngClass]="{'is-invalid':submitted && bookingform.controls['Number'].errors}" type="tel" class="form-control">
+                    <input formControlName="Number" [ngClass]="{'is-invalid':submitted && bookingform.controls['Number'].errors}" type="tel" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['Number'].errors" class="text-danger">
                       <div *ngIf="submitted && bookingform.controls['Number'].errors?.['required']">Please, enter your 10 digit Phone Number.</div>
                     </div>
@@ -37,7 +37,7 @@
 
                   <div class="formgroup col-md-6"> <!--Email of the form-->
                     <label for="email">Email:</label>
-                    <input formControlName="Email" {{bgl.Email}} [ngClass]="{'is-invalid':submitted && bookingform.controls['Email'].errors}" type="text" class="form-control">
+                    <input formControlName="Email" [ngClass]="{'is-invalid':submitted && bookingform.controls['Email'].errors}" type="text" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['Email'].errors" class="text-danger">
                       <div *ngIf="submitted && bookingform.controls['Email'].errors?.['required']">Please,enter your email.</div>
                       <div *ngIf="submitted && bookingform.controls['Email'].errors?.['email']">Please,enter your valid email.</div>
@@ -46,7 +46,7 @@
 
                   <div class="formgroup col-md-6"> <!--Age of the form-->
                       <label for="age">Age:</label>
-                      <input formControlName="Age" {{bgl.Age}} [ngClass]="{'is-invalid':submitted && bookingform.controls['Age'].errors}" type="text" class="form-control">
+                      <input formControlName="Age" [ngClass]="{'is-invalid':submitted && bookingform.controls['Age'].errors}" type="text" class="form-control">
                       <div *ngIf="submitted && bookingform.controls['Age'].errors" class="text-danger">
                         <div *ngIf="submitted && bookingform.controls['Age'].errors?.['required']">Please, enter your valid age.</div>
                       </div>
@@ -54,7 +54,7 @@
 
                   <div class="formgroup col-md-6"> <!--Blood Group of the form-->
                       <label for="BGroup">Blood Group:</label>
-                      <input formControlName="BGroup" {{bgl.Bgroup}} [ngClass]="{'is-invalid':submitted && bookingform.controls['BGroup'].errors}" type="text" class="form-control">
+                      <input formControlName="BGroup" [ngClass]="{'is-invalid':submitted && bookingform.controls['BGroup'].errors}" type="text" class="form-control">
                       <div *ngIf="submitted && bookingform.controls['BGroup'].errors" class="text-danger">
                         <div *ngIf="submitted && bookingform.controls['BGroup'].errors?.['required']">Please, enter your valid Blood Group.</div>
                       </div>
@@ -62,12 +62,12 @@
 
                   <div class="formgroup col-md-6"> <!--Doctor's name of the form-->
                       <label for="name">Doctor's Name:</label>
-                      <input  {{bgl.doctorname}} type="text" class="form-control">
+                      <input  type="text" class="form-control">
                   </div>
 
                   <div class="formgroup col-md-6"> <!--Health Concern of the form-->
                     <label for="query">Your Health Concern:</label>
-                    <input formControlName="Concern" {{bgl.messagr}} [ngClass]="{'is-invalid':submitted && bookingform.controls['Concern'].errors}" type="text" class="form-control">
+                    <input formControlName="Concern" [ngClass]="{'is-invalid':submitted && bookingform.controls['Concern'].errors}" type="text" class="form-control">
                     <div *ngIf="submitted && bookingform.controls['Concern'].errors" class="text-danger">
                       <div *ngIf="submitted && bookingform.controls['Concern'].errors?.['required']">Please, enter your health concern.</div>
                     </div>
