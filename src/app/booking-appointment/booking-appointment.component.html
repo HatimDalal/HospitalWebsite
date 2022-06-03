@@ -1,5 +1,7 @@
-<div id="fillinfo"> <!--Heading of Page has started-->
-<h1>Booking Appointment Page</h1>
+<div id="fillinfo"> 
+
+<h1>Booking Appointment Page</h1> <!--Heading of Page has started-->
+
 <p><i>Fill the following booking-appointment form,
   for your better healthcare solutions with our experienced doctors</i></p>
 </div> <!--Heading of Page has ended-->
@@ -68,38 +70,42 @@
                   <div class="formgroup col-md-6"> <!--Health Concern of the form-->
                     <label for="query">Your Health Concern:</label>
                     <input formControlName="Concern" [ngClass]="{'is-invalid':submitted && bookingform.controls['Concern'].errors}" type="text" class="form-control">
-                    <div *ngIf="submitted && bookingform.controls['Concern'].errors" class="text-danger">
+                    <div *ngIf="submitted && bookingform.controls['Concern'].errors" class="text-danger"></div>
                       <div *ngIf="submitted && bookingform.controls['Concern'].errors?.['required']">Please, enter your health concern.</div>
                     </div>
+  
+                  <div class="form-group col-md-7" id="button">  <!--Button of the form-->
+                      <button class="btn btn-primary" (click)="onSubmit()">Booking Appointment</button>
                   </div>
-
-                <div class="form-group col-md-7" id="button">  <!--Button of the form-->
-                    <button class="btn btn-primary">Booking Appointment</button>
-                </div>
-
-            </form>
-        </div>
-    </div>
-</div> <!--Booking Fom has ended-->
-
-<div id="thanks"> <!--Thanks Line has started-->
-  <h4 style="text-align: center;"><i>Thanks, for trusting our services !</i></h4>
-</div> <!--Thanks Line has ended-->
+  
+              </form>
+          </div>
+      </div>
+  </div> <!--Booking Fom has ended-->
+  
+  <div id="thanks"> <!--Thanks Line has started-->
+    <h4 style="text-align: center;"><i>Thanks, for trusting our services !</i></h4>
+  </div> <!--Thanks Line has ended-->
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

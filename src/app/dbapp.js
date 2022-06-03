@@ -5,7 +5,7 @@
 //     user: "postgres",
 //     port: 5432,
 //     password: "root",
-//     database: "hospitalWebsite"
+//     database: "Hospital"
 // });
 
 // client.connect();
