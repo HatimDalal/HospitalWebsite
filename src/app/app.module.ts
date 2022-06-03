@@ -19,7 +19,12 @@ import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
 
 import { HttpClientModule } from '@angular/common/http'
 import { ApiserviceService } from './apiservice.service';
+
 import { BookingService } from './booking.service';
+
+import { LoginComponent } from './login/login.component';
+import { DoctorsComponent } from './doctors/doctors.component';
+
 
 
 @NgModule({
@@ -34,7 +39,9 @@ import { BookingService } from './booking.service';
     HomeComponent,
     BookingAppointmentComponent,
     FreeCheckupComponent,
-  
+    LoginComponent,
+    DoctorsComponent,
+
     
 
   ],
@@ -53,7 +60,9 @@ import { BookingService } from './booking.service';
       {path: 'About-us', component:AboutUSComponent},
       {path: 'Inquiry', component:InquiryPageComponent},
       {path:'Booking-Appointment',component:BookingAppointmentComponent},
-      {path:'Free-Checkup',component:FreeCheckupComponent}
+      {path:'Free-Checkup',component:FreeCheckupComponent},
+      {path:'Login',component:LoginComponent},
+      {path:'All-Doctors',component:DoctorsComponent}
     ])
   ],
   providers: [ApiserviceService,BookingService],

@@ -4,17 +4,16 @@ import { EmailValidator, FormBuilder, FormGroup, Validators } from '@angular/for
 import { Booking } from '../booking';
 import { BookingService } from '../booking.service';
 
-
 @Component({
   selector: 'app-booking-appointment',
   templateUrl: './booking-appointment.component.html',
   styleUrls: ['./booking-appointment.component.css']
 })
+
 export class BookingAppointmentComponent {
   bookingform!:FormGroup
   submitted = false;
-  isLoaded: boolean = false;
-  patient: any;
+  
   constructor (private book:BookingService,private FormBuilder:FormBuilder){ }
 
   Result:Booking[]=[];
