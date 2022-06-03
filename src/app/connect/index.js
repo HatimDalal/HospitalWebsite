@@ -51,7 +51,7 @@ app.get('/Appointment', (req, res) => {
 
                     Bgroup:result.rows[i].Bgroup,
 
-                    doctorename:result.rows[i].doctorename,
+                    doctorname:result.rows[i].doctorname,
 
                     message: result.rows[i].message
 
@@ -75,20 +75,21 @@ app.get('/Appointment', (req, res) => {
 });
 
 //post method
-app.post('/form',(req,res)=>{
+app.post('/Appointment',(req,res)=>{
 
     console.log(req.body,'createdata');
   
    let firstname = req.body.firstname;
    let lastname = req.body.lastname;
-   let Email = req.body.Email;
    let Phone = req.body.Phone;
+   let Email = req.body.Email;
    let Age=req.body.Age;
-   let doctorename=req.body.doctorename;
+   let Bgroup=req.body.Bgroup
+   let doctorname=req.body.doctorname;
    let message = req.body.message;
   
-   let qr = `insert into Appointment(firstname,lastname,Phone,email,Age,Bgroup,message)
-             values('${firstname}','${lastname}','${Email}','${Phone}','${Age}','${doctorename}','${message}')`;
+   let qr = `insert into Appointment(firstname,lastname,Phone,Email,Age,Bgroup,doctorname,message)
+             values('${firstname}','${lastname}','${Phone}','${Email}','${Age}','${Bgroup}','${doctorname}','${message}')`;
       console.log(qr,'qr')
   
     db.query(qr,(err,result)=>{

@@ -17,21 +17,21 @@ export class BookingService {
 
   constructor(private http: HttpClient) { }
 
-	getAll():Observable<Booking[]> {
+	// getAll():Observable<Booking[]> {
 
-    let baseurl = 'http://localhost:3000/Appointment';
-	  return this.http.get<Booking[]>(baseurl);
-	}
+  //   let baseurl = 'http://localhost:3000/Appointment';
+	//   return this.http.get<Booking[]>(baseurl);
+	// }
 
-  createdata(data:any):Observable<any>
+  createdata(data:Booking)//Observable<any>
   {
     //let bsurl = 'http://localhost:3000/Appointment';
 
 
     console.log(data,'createapi=>');
-    let observable = this.http.post<any>("http://localhost:3000/Appointment",data);
+     this.http.post<Booking>("http://localhost:3000/Appointment",data);
    // return this.http.post<Booking[]>(`${this.bsurl}`, data);
-    return observable;
+    //return observable;
 
   }
 
