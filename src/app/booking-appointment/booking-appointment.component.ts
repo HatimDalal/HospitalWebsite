@@ -30,34 +30,51 @@ export class BookingAppointmentComponent {
       BGroup:['',[Validators.required,Validators.minLength(3),Validators.maxLength(3)]],
       Concern:['',Validators.required]
     })
-       this.book.getAll().subscribe((data:Booking[])=>{
-         for(var i=0;i<data.length;i++){
-           let ba:Booking={
-             firstname:data[i].firstname,
-             lastname:data[i].lastname,
-             Phone:data[i].Phone,
-             Email:data[i].Email,
-             Age: data[i].Age,
-             Bgroup:data[i].Bgroup,
-             doctorname:data[i].doctorname,
-             message:data[i].message,
+      this.book.getAll().subscribe((data:Booking[])=>{
+        for(var i=0;i<data.length;i++){
+          let ba:Booking={
+              firstname:data[i].firstname,
+              lastname:data[i].lastname,
+              Phone:data[i].Phone,
+              Email:data[i].Email,
+              Age: data[i].Age,
+              Bgroup:data[i].Bgroup,
+              doctorname:data[i].doctorname,
+              message:data[i].message,
 
-           };
-           this.Result.push(ba);
-           console.log(this.Result);
-         }
+            };
+            this.Result.push(ba);
+            console.log(this.Result);
+          }
        });
+      }
+
+       onSubmit()
+       {
+        this.submitted = true
+
+        if(this.bookingform.invalid){
+          return
+        }
+        alert("Success")
+         if(this.bookingform.valid){
+           console.log(this.bookingform.value);
+           this.book.createdata(this.bookingform.value).subscribe((res)=>{
+           console.log(res, 'res==>');
+            this.bookingform.reset();
+         });
+       }
 
   }
 
-  onSubmit(){
-    this.submitted = true
+  // onSubmit(){
+  //   this.submitted = true
 
-    if(this.bookingform.invalid){
-      return
-    }
-    alert("Success")
-  }
+  //   if(this.bookingform.invalid){
+  //     return
+  //   }
+  //   alert("Success")
+  // }
 
 
 

@@ -19,6 +19,7 @@ import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
 
 import { HttpClientModule } from '@angular/common/http'
 import { ApiserviceService } from './apiservice.service';
+import { BookingService } from './booking.service';
 
 
 @NgModule({
@@ -33,6 +34,7 @@ import { ApiserviceService } from './apiservice.service';
     HomeComponent,
     BookingAppointmentComponent,
     FreeCheckupComponent,
+  
     
 
   ],
@@ -54,7 +56,7 @@ import { ApiserviceService } from './apiservice.service';
       {path:'Free-Checkup',component:FreeCheckupComponent}
     ])
   ],
-  providers: [ApiserviceService],
+  providers: [ApiserviceService,BookingService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
