@@ -52,41 +52,41 @@ client.connect(err => {
   if (err) { console.log('err'); }
   console.log('database Connected....');
 })
-//get method
-app.get('/form',(req,res) => {
-  let qr = `Select * from public."form"`
-  client.query({
-    text:qr
-  })
-  .then(result=> {
-    var data1 = [];
-    for (var i=0;i<result.rows.length;i++){
-      data1.push({
-        fname: result.rows[i].fname,
-        lname: result.rows[i].lname,
-        pnumber: result.rows[i].pnumber,
-        email:result.rows[i].email,
-        issue:result.rows[i].issue
-      });
-    }
-    res.send(data1);
-  })
-  .catch(err => console.log(err,'errs'));
-});
+// //get method
+// app.get('/form',(req,res) => {
+//   let qr = `Select * from public."form"`
+//   client.query({
+//     text:qr
+//   })
+//   .then(result=> {
+//     var data1 = [];
+//     for (var i=0;i<result.rows.length;i++){
+//       data1.push({
+//         fname: result.rows[i].firstname,
+//         lname: result.rows[i].lastname,
+//         pnumber: result.rows[i].phonenumber,
+//         email:result.rows[i].Email,
+//         issue:result.rows[i].Issue
+//       });
+//     }
+//     res.send(data1);
+//   })
+//   .catch(err => console.log(err,'errs'));
+// });
 
 //post method
 app.post('/form',(req,res)=>{
 
   console.log(req.body,'createdata');
 
- let firstname = req.body.fname;
- let lastname = req.body.lname;
- let phonenumber = req.body.pnumber;
- let Email = req.body.email;
- let Issue = req.body.issue;
+ let firstname = req.body.firstname;
+ let lastname = req.body.lastname;
+ let phonenumber = req.body.phonenumber;
+ let Email = req.body.Email;
+ let Issue = req.body.Issue;
 
- let qr = `insert into form(fname,lname,pnumber,email,issue)
-           values('${firstname}','${lastname}','${phonenumber}','${Email}','${Issue}')`;
+ let qr = `insert into form(fname,lname,email,issue,pnumber)
+           values('${firstname}','${lastname}','${Email}','${Issue}','${phonenumber}')`;
     console.log(qr,'qr')
 
   db.query(qr,(err,result)=>{

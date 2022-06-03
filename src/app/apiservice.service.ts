@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHandler } from '@angular/common/http';
-import { Observable } from 'rxjs';
+import { catchError, Observable, pipe, throwError } from 'rxjs';
 import { Inquiry } from './inquiry';
 
 @Injectable({
@@ -12,24 +12,30 @@ export class ApiserviceService {
   constructor(private _http:HttpClient) { }
   // connect HospitalWebsite to backend
 
+  // getAll():Observable<Inquiry[]>{
+  //   let apiUrl = 'http://localhost:3000/form';
 
+  //   return this._http.get<Inquiry[]>(apiUrl);
+  // }
 
-  getAll():Observable<Inquiry[]>{
-    let apiUrl = 'http://localhost:3000/form';
-
-    return this._http.get<Inquiry[]>(apiUrl);
-  }
-
-  createdata(data:any):Observable<any>
+  createdata(inquiry:Inquiry)//:Observable<any>
   {
-    let apiUrl = 'http://localhost:3000/form';
+    let apiUrl = 'http://localhost:3000';
 
+    console.log(inquiry);
+    // let observable =
 
-    console.log(data,'createapi=>');
-    return this._http.post(`${this.apiUrl}`, data);
+    this._http.post<Inquiry>("http://localhost:3000/form",inquiry);
+    // return this._http.post(`${this.apiUrl}`, data);
+    // return observable;
+
   }
 
-
+  // createPatient(patient): Observable<any>{
+  //   console.log(patient);
+  //   let observable = this.http.post<any>("http://localhost:8080/createpatient",patient);
+  //   return observable;
+  // }
 
   // //get all data
   // getAllData():Observable<any>

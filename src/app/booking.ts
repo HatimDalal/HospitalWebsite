@@ -1,10 +1,10 @@
 export interface Booking {
     firstname:string,
     lastname:string,
-    Phone:number,
+    Phone:string,
     Email:string
-    Age:number,
-    Bgroup:number,
+    Age:string,
+    Bgroup:string,
     doctorname:string,
     message:string,
 

@@ -1,10 +1,16 @@
 const express = require('express');
 const bodyparser = require('body-parser');
 const cors = require('cors');
-
+const { Client } = require('pg');
 const db = require('../connect/env')
 
 const app = express();
+app.use(function(req,res,next){
+    res.header('Access-Control-Allow-Origin',"*");
+    res.header('Access-Control-Allow-Methods','GET,PUT,POST,DELETE');
+    res.header('Access-Control-Allow-Headers','Content-Type');
+    next();
+  });
 
 app.use(cors());
 app.use(bodyparser.json());
@@ -17,18 +23,14 @@ db.connect(err => {
 
 // Get all data
 // module.get=(app.get);
-app.get('/data', (req, res) => {
 
+app.get('/Appointment', (req, res) => {
     let qr = `Select * from public."Appointment"`
     db
         .query({
-
             // rowMode: "array",
-
             text: qr
-
         })
-
         .then(result => {
             
             var data1 = [];
@@ -49,34 +51,59 @@ app.get('/data', (req, res) => {
 
                     Bgroup:result.rows[i].Bgroup,
 
-                    doctorename:result.rows[i].doctorename,
+                    doctorname:result.rows[i].doctorname,
 
                     message: result.rows[i].message
 
-
-
-
                 });
+            
 
             }
 
-            
+            // console.log(result);
+            // if(result.length > 0)
+            // {
+            // console.log(result.rows[0].Name);
             res.send(
-
                 // message: 'all user data',
-
                 // data: result.rows
-
                 data1
-
             );
-
             // }
-
         })
-
         .catch(err => console.log(err, 'errs'));
-
 });
 
+//post method
+app.post('/Appointment',(req,res)=>{
 
+    console.log(req.body,'createdata');
+  
+   let firstname = req.body.firstname;
+   let lastname = req.body.lastname;
+   let Phone = req.body.Phone;
+   let Email = req.body.Email;
+   let Age=req.body.Age;
+   let Bgroup=req.body.Bgroup
+   let doctorname=req.body.doctorname;
+   let message = req.body.message;
+  
+   let qr = `insert into Appointment(firstname,lastname,Phone,Email,Age,Bgroup,doctorname,message)
+             values('${firstname}','${lastname}','${Phone}','${Email}','${Age}','${Bgroup}','${doctorname}','${message}')`;
+      console.log(qr,'qr')
+  
+    db.query(qr,(err,result)=>{
+  
+      if(err){console.log(err);}
+      console.log(result,'result')
+      res.send({
+        message:'data inserted'
+      });
+    });
+  });
+
+
+
+app.listen(3000, () => {
+    console.log('Server Running');
+})

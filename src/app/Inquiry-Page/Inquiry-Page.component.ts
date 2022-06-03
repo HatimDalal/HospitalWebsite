@@ -20,30 +20,28 @@ Result:Inquiry[]=[];
   ngOnInit(){
     //validations
     this.inquiryform = this.FormBuilder.group({
-      firstName:['',Validators.required],
-      lastName:['',Validators.required],
-      Number:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
+      firstname:['',Validators.required],
+      lastname:['',Validators.required],
+      phonenumber:['',[Validators.required,Validators.minLength(10),Validators.maxLength(10)]],
       Email:['',[Validators.required,Validators.email]],
-      Query:['',Validators.required]
+      Issue:['',Validators.required]
     })
 
-    this.service.getAll().subscribe((service:Inquiry[])=>{
-      for(var i=0;i<service.length;i++){
-        let se:Inquiry={
-          fname:service[i].fname,
-          lname:service[i].lname,
-          pnumber:service[i].pnumber,
-          email:service[i].email,
-          issue:service[i].issue
-        };
-        this.Result.push(se);
-        console.log(this.Result);
-      }
-    });
+    // this.service.getAll().subscribe((service:Inquiry[])=>{
+    //   for(var i=0;i<service.length;i++){
+    //     let se:Inquiry={
+    //       fname:service[i].fname,
+    //       lname:service[i].lname,
+    //       pnumber:service[i].pnumber,
+    //       email:service[i].email,
+    //       issue:service[i].issue
+    //     };
+    //     this.Result.push(se);
+    //     console.log(this.Result);
+    //   }
+    // });
 
   }
-
-
 
   onSubmit() {
     this.submitted = true
@@ -56,10 +54,11 @@ Result:Inquiry[]=[];
     if(this.inquiryform.valid)
     {
       console.log(this.inquiryform.value);
-      this.service.createdata(this.inquiryform.value).subscribe((res)=>{
-        console.log(res, 'res==>');
-        this.inquiryform.reset();
-      });
+      this.service.createdata(this.inquiryform.value);
+      // ((res)=>{
+      //   console.log(res, 'res==>');
+      //   this.inquiryform.reset();
+      // });
     }
     // else{
     //   console.log('all fields are required.');

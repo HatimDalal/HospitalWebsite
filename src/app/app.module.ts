@@ -18,11 +18,15 @@ import { RouterModule } from "@angular/router";
 
 import { HttpClientModule } from '@angular/common/http'
 import { ApiserviceService } from './apiservice.service';
+
+import { BookingService } from './booking.service';
+
 import { DoctorsComponent } from './doctors/doctors.component';
 
 // import{AngularFireModule} from 'angularfire';
 // import{AngularFireDatabaseModule} from 'angularfire/database';
 // import{AngularFireAuthModule} from 'angularfire/auth';
+
 
 @NgModule({
   declarations: [
@@ -36,6 +40,7 @@ import { DoctorsComponent } from './doctors/doctors.component';
     HomeComponent,
     BookingAppointmentComponent,
     DoctorsComponent,
+
     
 
   ],
@@ -57,7 +62,7 @@ import { DoctorsComponent } from './doctors/doctors.component';
       {path:'All-Doctors',component:DoctorsComponent}
     ])
   ],
-  providers: [ApiserviceService],
+  providers: [ApiserviceService,BookingService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
