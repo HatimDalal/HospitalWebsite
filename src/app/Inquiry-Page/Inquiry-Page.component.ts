@@ -27,23 +27,21 @@ Result:Inquiry[]=[];
       Query:['',Validators.required]
     })
 
-    this.service.getAll().subscribe((service:Inquiry[])=>{
-      for(var i=0;i<service.length;i++){
-        let se:Inquiry={
-          fname:service[i].fname,
-          lname:service[i].lname,
-          pnumber:service[i].pnumber,
-          email:service[i].email,
-          issue:service[i].issue
-        };
-        this.Result.push(se);
-        console.log(this.Result);
-      }
-    });
+    // this.service.getAll().subscribe((service:Inquiry[])=>{
+    //   for(var i=0;i<service.length;i++){
+    //     let se:Inquiry={
+    //       fname:service[i].fname,
+    //       lname:service[i].lname,
+    //       pnumber:service[i].pnumber,
+    //       email:service[i].email,
+    //       issue:service[i].issue
+    //     };
+    //     this.Result.push(se);
+    //     console.log(this.Result);
+    //   }
+    // });
 
   }
-
-
 
   onSubmit() {
     this.submitted = true

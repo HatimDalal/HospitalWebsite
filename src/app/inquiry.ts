@@ -1,9 +1,9 @@
 export interface Inquiry {
-  fname: string,
-  lname:string,
-  pnumber: number,
-  email: string,
-  issue: string
+  firstname: string,
+  lastname:string,
+  phonenumber: number,
+  Email: string,
+  Issue: string
 }
 
 
