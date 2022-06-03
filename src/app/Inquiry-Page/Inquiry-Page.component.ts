@@ -54,10 +54,11 @@ Result:Inquiry[]=[];
     if(this.inquiryform.valid)
     {
       console.log(this.inquiryform.value);
-      this.service.createdata(this.inquiryform.value).subscribe((res)=>{
-        console.log(res, 'res==>');
-        this.inquiryform.reset();
-      });
+      this.service.createdata(this.inquiryform.value);
+      // ((res)=>{
+      //   console.log(res, 'res==>');
+      //   this.inquiryform.reset();
+      // });
     }
     // else{
     //   console.log('all fields are required.');

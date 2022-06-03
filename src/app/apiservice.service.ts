@@ -18,14 +18,16 @@ export class ApiserviceService {
   //   return this._http.get<Inquiry[]>(apiUrl);
   // }
 
-  createdata(inquiry:any):Observable<any>
+  createdata(inquiry:Inquiry)//:Observable<any>
   {
     let apiUrl = 'http://localhost:3000';
 
     console.log(inquiry,'createapi=>');
-    let observable = this._http.post<any>("http://localhost:3000/form",inquiry);
+    // let observable =
+
+    this._http.post<Inquiry>("http://localhost:3000/form",inquiry);
     // return this._http.post(`${this.apiUrl}`, data);
-    return observable;
+    // return observable;
 
   }
 

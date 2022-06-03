@@ -1,7 +1,7 @@
 export interface Inquiry {
   firstname: string,
   lastname:string,
-  phonenumber: number,
+  phonenumber: string,
   Email: string,
   Issue: string
 }
