@@ -24,14 +24,15 @@
   text-align: center;
 }
 .column{
-  float: left;
-  width: 48%;
+  padding-right: 80px;
 }
 .info{
   padding-right: 10%;
 }
 .column1{
   padding-top: 5%;
+  align-content: center;
+  padding-left: 20px
 }
 #showcase1{
   width: 100%;
@@ -40,8 +41,8 @@
 }
 #Showcase-column1{
   padding-top: 10px;
-  width: 100%;
-  clear: both;
+  padding-right: 50px;
+  align-content: center;
 }
 .image1{
   width: 41%;
@@ -52,7 +53,6 @@
 .column2{
   float: right;
   width: 50%;
-  text-align: center;
 }
 #data{
   padding-top: 230px;
@@ -70,4 +70,10 @@
 .image2{
   width: 100%;
   height: 5%;
+}
+
+.column3{
+  padding-top: 5%;
+  align-content: center;
+  padding-left: 20px
 }

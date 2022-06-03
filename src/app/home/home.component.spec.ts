@@ -22,4 +22,10 @@ describe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('h1',()=>{
+    expect(component).toBeTruthy(true);
+  })
+
+  
 });

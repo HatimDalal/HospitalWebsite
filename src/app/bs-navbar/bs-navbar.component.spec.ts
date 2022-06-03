@@ -20,6 +20,18 @@ describe('BsNavbarComponent', () => {
   });
 
   it('LogoImg', () => {
-    expect(component.logosvg).toBeTruthy(true);
+    expect(component.logosvg).toBeTrue;
+  });
+  it('Services', () => {
+    expect(component).toBeTrue;
+  });
+  it('About-us', () => {
+    expect(component).toBeTrue;
+  });
+  it('Booking-Appointment', () => {
+    expect(component).toBeTrue;
+  });
+  it('All-Doctors', () => {
+    expect(component).toBeTrue;
   });
 });

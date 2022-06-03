@@ -15,13 +15,14 @@ import { InquiryPageComponent } from './Inquiry-Page/Inquiry-Page.component';
 import { BookingAppointmentComponent } from './booking-appointment/booking-appointment.component';
 
 import { RouterModule } from "@angular/router";
-import { FreeCheckupComponent } from './free-checkup/free-checkup.component';
 
 import { HttpClientModule } from '@angular/common/http'
 import { ApiserviceService } from './apiservice.service';
-import { LoginComponent } from './login/login.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 
+// import{AngularFireModule} from 'angularfire';
+// import{AngularFireDatabaseModule} from 'angularfire/database';
+// import{AngularFireAuthModule} from 'angularfire/auth';
 
 @NgModule({
   declarations: [
@@ -34,8 +35,6 @@ import { DoctorsComponent } from './doctors/doctors.component';
     InquiryPageComponent,
     HomeComponent,
     BookingAppointmentComponent,
-    FreeCheckupComponent,
-    LoginComponent,
     DoctorsComponent,
     
 
@@ -55,8 +54,6 @@ import { DoctorsComponent } from './doctors/doctors.component';
       {path: 'About-us', component:AboutUSComponent},
       {path: 'Inquiry', component:InquiryPageComponent},
       {path:'Booking-Appointment',component:BookingAppointmentComponent},
-      {path:'Free-Checkup',component:FreeCheckupComponent},
-      {path:'Login',component:LoginComponent},
       {path:'All-Doctors',component:DoctorsComponent}
     ])
   ],
